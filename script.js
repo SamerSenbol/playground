@@ -9,7 +9,7 @@ function changeBackground(){
 console.log("It works!");
 }
 
-function randomizBackground(){
+function randomizeBackground(){
     var style =document.body.style;
     var randomValue=Math.random();
     console.log(randomValue);
@@ -24,7 +24,15 @@ function randomizBackground(){
     }
   else{  style.backgroundColor="yellow";}
     }
-
+    function randomizeBackgroundPro(){
+        var red =Math.round(Math.random()*255);
+        var green =Math.round(Math.random()*255);
+        var blue =Math.round(Math.random()*255);
+        var rgbValue ="rgb("+ red +","+green +","+blue +")";
+        console.log(rgbValue);
+        document.body.style.backgroundColor=rgbValue;
+    }
+    setInterval(randomizeBackgroundPro,1000);
 
 //pass by Value
 //string, number,boolean
